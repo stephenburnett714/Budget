@@ -27,7 +27,7 @@ This is a replica Budget Car Rental app. By replica I mean new and improved. The
 
 ## ERD Diagram
 
-![Erd Diagram](https://res.cloudinary.com/anthony-dev/image/upload/v1581717078/Edited_ERD_wdraso.png) 
+![Erd Diagram](https://res.cloudinary.com/dkwosricc/image/upload/v1582038724/Screen_Shot_2020-02-18_at_10.11.57_AM_bjlq6h.png) 
 
 ## Endpoints
 
