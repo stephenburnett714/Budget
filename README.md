@@ -27,7 +27,7 @@ This is a replica Budget Car Rental app. By replica I mean new and improved. The
 
 ## ERD Diagram
 
-![Erd Diagram](https://res.cloudinary.com/anthony-dev/image/upload/v1581717078/Edited_ERD_wdraso.png) 
+![Erd Diagram](https://res.cloudinary.com/dkwosricc/image/upload/v1582038724/Screen_Shot_2020-02-18_at_10.11.57_AM_bjlq6h.png) 
 
 ## Endpoints
 
@@ -100,13 +100,13 @@ Show reservation info from a booked user.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Styling/CSS | H | 16 hrs| 0 hrs | 0 hrs |
+| Styling/CSS | H | 20 hrs| 0 hrs | 0 hrs |
 | React Components | H | 10 hrs| 0 hrs | 0 hrs |
 | Setup database | H | 10 hrs| 0 hrs | 0 hrs |
-| Logic Functionality | H | 12 hrs| 0 hrs | 0 hrs |
-| Full CRUD Functionality | H | 18 hrs| 0 hrs | 0 hrs |
-| Merging Front-End/Back-End | H | 10 hrs| 0 hrs | 0 hrs |
-| Total | H | 76 hrs| 0 hrs | 0 hrs |
+| Logic Functionality | H | 15 hrs| 0 hrs | 0 hrs |
+| Full CRUD Functionality | H | 20 hrs| 0 hrs | 0 hrs |
+| Merging Front-End/Back-End | H | 15 hrs| 0 hrs | 0 hrs |
+| Total | H | 92 hrs| 0 hrs | 0 hrs |
 
 ## Additional Libraries
 
