@@ -1,14 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react'
+import { Route, withRouter } from 'react-router-dom'
+import SelectACar from './components/routes/SelectACar'
 import Nav from './components/Nav'
+import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Nav />
-    </div>
-  );
-}
 
-export default App;
+const App = props => (
+  <React.Fragment>
+    <Route exact path="/carselect" component={SelectACar} />
+  </React.Fragment>
+)
+
+export default withRouter(App)
