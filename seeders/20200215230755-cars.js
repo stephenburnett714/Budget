@@ -16,6 +16,7 @@ module.exports = {
         sideImg: "N/a",
         description: "info",
         availability: true,
+        reservationsId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -31,6 +32,7 @@ module.exports = {
         backImg: "N/a",
         sideImg: "N/a",
         description: "info",
+        reservationsId: 0,
         availability: true,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -38,12 +40,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('People', null, {});
-    */
+    return queryInterface.bulkDelete('Cars', null, {});
   }
 };

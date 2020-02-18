@@ -21,7 +21,11 @@ router.get('/reservations/:id', controllers.getReservation)
 router.put('/reservations/:id', controllers.updateReservation)
 router.delete('/reservations/:id', controllers.deleteReservation)
 
+
 //Cars
-// router.get(cars)
+router.get('/cars', controllers.getAllCars)
+router.get('/cars/:id', controllers.getCarById)
+router.put('/cars/:id', controllers.updateCar)
+
 
 module.exports = router
