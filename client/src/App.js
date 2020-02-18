@@ -1,6 +1,9 @@
+
 import React from 'react'
 import { Route, withRouter } from 'react-router-dom'
 import SelectACar from './components/routes/SelectACar'
+import Nav from './components/Nav'
+import './App.css';
 
 
 const App = props => (
