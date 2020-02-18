@@ -8,16 +8,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      PickUpDate: {
+      pickUpDate: {
         type: Sequelize.STRING
       },
-      DropOffDate: {
+      dropOffDate: {
         type: Sequelize.STRING
       },
-      UserId: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      LocationId: {
+      locationId: {
+        type: Sequelize.INTEGER
+      },
+      carId: {
         type: Sequelize.INTEGER
       },
       createdAt: {
