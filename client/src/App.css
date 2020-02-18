@@ -1,33 +1,71 @@
-.App {
-  text-align: center;
+.Nav{
+  /* display: flex; */
+  text-align: right;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.BUDGET-LOGO {
+  background-image: url('./images/budget-logo.png');
+  
+  width: 15.938rem;
+  height: 4.688rem;
+  object-fit: contain;
+  margin-left: 3.063rem;
+  margin-top: 0.563rem;
+  margin-bottom: 0.344rem;
 }
+.Business-Rentals-Car{
+  /* width: 29.5rem; */
+  
+  height: 1.25rem;
+  font-family: Avenir;
+  font-size: 0.938;
+  font-weight: 900;
+  color: #ea9034;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--terra-cotta);
+  padding-right: 10px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* align-self: flex-start; */
+  text-align: right;
+  width: 100%;
+ 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  /* background-color: orange; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Business-Rentals-Car a{
+  text-decoration: none;
+  text-align: right;
+}
+.Reservations-Deals-L{
+  /* background-color: red; */
+  width: 35.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  font-family: Avenir;
+  font-size: 1.25rem;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--marine);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-self: flex-end;
+  margin-right: 4.625;
+  margin-bottom: 0.25;
+  margin-top: 0.438;
+  margin-left: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.Reservations-Deals-L a{
+  text-decoration: none;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
