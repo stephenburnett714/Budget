@@ -4,9 +4,9 @@ import {BrowserRouter as Router, Link } from 'react-router-dom'
 function ResultsNav() {
     return (
         <Router>
-        <div>
+        <div className="Nav">
             <div className="homebutton">
-                <Link to='/'>Home</Link>
+                {/* <Link to='/'>Home</Link> */}
             </div>
             <div className="resultsnav">
                 <Link to='/customercare'>Customer Care</Link>

@@ -67,6 +67,25 @@
   text-decoration: none;
 }
 
+.homebutton {
+  background-image: url('./images/budget-logo.png');
+  width: 15.938rem;
+  height: 4.688rem;
+  object-fit: contain;
+  margin-left: 3.063rem;
+  margin-top: 0.563rem;
+  margin-bottom: 0.344rem;
+}
+.resultsnav {
+  padding-right: 50px;
+  display: flex;
+  ;
+}
+.resultsnav a{
+  text-decoration: none;
+}
+
+
 .select-a-car-bar {
   min-height: 3.125rem;
   min-width: 100%;
@@ -76,8 +95,6 @@
   content: ' ';
   background-repeat: no-repeat;
   margin-top: 2rem;
-  
-  /* display: flex; */
   justify-content: center;
 
 }
