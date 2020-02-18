@@ -1,23 +1,21 @@
-
 import React from 'react'
+import './App.css'
+import LandingPage from './components/landingPage'
 import { Route, withRouter } from 'react-router-dom'
 import SelectACar from './components/routes/SelectACar'
 import ResultsNav from './components/ResultsNav';
-import SearchWidget from './components/SearchWidget';
-
-
 
 function App() {
   return (
-    <div className="App">
-      <SearchWidget />
-    </div>
-  <React.Fragment>
-    <Route exact path="/carselect" component={SelectACar} />
-  </React.Fragment>
-   
+    <React.Fragment>
+      <div className="App">
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/carselect" component={SelectACar} />
+      </div>
+    </React.Fragment>
   );
 }
 
 
 export default withRouter(App)
+
