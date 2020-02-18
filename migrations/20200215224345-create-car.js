@@ -8,41 +8,44 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Make: {
+      make: {
         type: Sequelize.STRING
       },
-      Model: {
+      model: {
         type: Sequelize.STRING
       },
-      Size: {
+      size: {
         type: Sequelize.STRING
       },
-      Quality: {
+      quality: {
         type: Sequelize.INTEGER
       },
-      Mpg: {
+      mpg: {
         type: Sequelize.INTEGER
       },
-      Seating: {
+      seating: {
         type: Sequelize.INTEGER
       },
-      Luggage: {
+      luggage: {
         type: Sequelize.STRING
       },
-      Price: {
+      price: {
         type: Sequelize.INTEGER
       },
-      Img: {
+      frontImg: {
         type: Sequelize.STRING
       },
-      Description: {
+      backImg: {
         type: Sequelize.STRING
       },
-      Availability: {
+      sideImg: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.STRING
+      },
+      availability: {
         type: Sequelize.BOOLEAN
-      },
-      LocationId: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
