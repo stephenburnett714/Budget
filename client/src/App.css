@@ -1,4 +1,3 @@
-
 .FAVPNG_leaves_rkB7hhB5 {
   background-image: url(./images/favpng-leaves-rk-b-7-hh-b-5.png);
   z-index: 2;
@@ -162,34 +161,122 @@
   margin-top: 5rem;
   position: relative;
   /* z-index: ; */
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Nav{
+  /* display: flex; */
+  text-align: right;
 }
+.BUDGET-LOGO {
+  background-image: url('./images/budget-logo.png');
+  
+  width: 15.938rem;
+  height: 4.688rem;
+  object-fit: contain;
+  margin-left: 3.063rem;
+  margin-top: 0.563rem;
+  margin-bottom: 0.344rem;
+}
+.Business-Rentals-Car{
+  /* width: 29.5rem; */
+  
+  height: 1.25rem;
+  font-family: Avenir;
+  font-size: 0.938;
+  font-weight: 900;
+  color: #ea9034;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--terra-cotta);
+  padding-right: 10px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* align-self: flex-start; */
+  text-align: right;
+  width: 100%;
+ 
+  /* background-color: orange; */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.Business-Rentals-Car a{
+  text-decoration: none;
+  text-align: right;
+}
+.Reservations-Deals-L{
+  /* background-color: red; */
+  width: 35.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  font-family: Avenir;
+  font-size: 1.25rem;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--marine);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+  align-self: flex-end;
+  margin-right: 4.625;
+  margin-bottom: 0.25;
+  margin-top: 0.438;
+  margin-left: auto;
+}
+.Reservations-Deals-L a{
+  text-decoration: none;
+}
+
+.homebutton {
+  background-image: url('./images/budget-logo.png');
+  width: 15.938rem;
+  height: 4.688rem;
+  object-fit: contain;
+  margin-left: 3.063rem;
+  margin-top: 0.563rem;
+  margin-bottom: 0.344rem;
+}
+.resultsnav {
+  padding-right: 50px;
+  display: flex;
+  ;
+}
+.resultsnav a{
+  text-decoration: none;
+}
+
+
+.select-a-car-bar {
+  min-height: 3.125rem;
+  min-width: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+  content: ' ';
+  background-repeat: no-repeat;
+  margin-top: 2rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.blue-bar {
+  min-height: 100vw;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  content: ' ';
+  background-repeat: no-repeat;
+  justify-content: center;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select-car-div {
+/* display: flex; */
+/* width: 100vw; */
+/* height: 100vh; */
 }
+
