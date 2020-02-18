@@ -100,13 +100,13 @@ Show reservation info from a booked user.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Styling/CSS | H | 16 hrs| 0 hrs | 0 hrs |
+| Styling/CSS | H | 20 hrs| 0 hrs | 0 hrs |
 | React Components | H | 10 hrs| 0 hrs | 0 hrs |
 | Setup database | H | 10 hrs| 0 hrs | 0 hrs |
-| Logic Functionality | H | 12 hrs| 0 hrs | 0 hrs |
-| Full CRUD Functionality | H | 18 hrs| 0 hrs | 0 hrs |
-| Merging Front-End/Back-End | H | 10 hrs| 0 hrs | 0 hrs |
-| Total | H | 76 hrs| 0 hrs | 0 hrs |
+| Logic Functionality | H | 15 hrs| 0 hrs | 0 hrs |
+| Full CRUD Functionality | H | 20 hrs| 0 hrs | 0 hrs |
+| Merging Front-End/Back-End | H | 15 hrs| 0 hrs | 0 hrs |
+| Total | H | 92 hrs| 0 hrs | 0 hrs |
 
 ## Additional Libraries
 
