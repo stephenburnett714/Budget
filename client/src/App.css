@@ -66,6 +66,23 @@
 .Reservations-Deals-L a{
   text-decoration: none;
 }
+.homebutton {
+  background-image: url('./images/budget-logo.png');
+  width: 15.938rem;
+  height: 4.688rem;
+  object-fit: contain;
+  margin-left: 3.063rem;
+  margin-top: 0.563rem;
+  margin-bottom: 0.344rem;
+}
+.resultsnav {
+  padding-right: 50px;
+  display: flex;
+  ;
+}
+.resultsnav a{
+  text-decoration: none;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
