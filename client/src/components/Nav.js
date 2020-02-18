@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Link } from 'react-router-dom'
 
 
 function Nav() {
+    console.log('alex')
     return (
         <div className="Nav">
             <Router>
