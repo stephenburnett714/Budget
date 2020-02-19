@@ -1,21 +1,116 @@
 .FAVPNG_leaves_rkB7hhB5 {
   background-image: url(./images/favpng-leaves-rk-b-7-hh-b-5.png);
-  z-index: 2;
   width: 36.25rem;
   height: 45rem;
-  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); */
   position: relative;
-  left: 68.75rem;
+  left: 66.75rem;
   bottom: 13.75rem;
 }
 
 .car-type-div {
   margin: 0;
+  position: relative;
+  display: inline-block;
+  
 }
 
 .car-select-div {
   align-content: center;
 }
+
+.car-select-link {
+  text-decoration: none;
+}
+
+.car-type-buttons {
+  display: block;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  width: 100%;
+}
+
+.calendar-dropdown {
+  background-color: #fcfcfc;
+  color: black;
+  padding: 6px;
+  font-size: 14px;
+  border: 0.1875rem solid #DD5F29;
+  width: 294px;
+  text-align: left;
+}
+
+.calendar-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.calendar-div {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+/* .calendar-dropdown-content Calendar {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} */
+
+/* .vehicle-dropdown-content Calendar:hover {
+  background-color: #ddd;
+  cursor: pointer;
+} */
+
+.calendar-div:hover .calendar-dropdown-content {display: block;}
+
+.drop-vehicle-button {
+  background-color: #fcfcfc;
+  color: black;
+  padding: 6px;
+  font-size: 14px;
+  border: 0.1875rem solid #DD5F29;
+  width: 294px;
+  text-align: left;
+}
+
+.vehicle-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.vehicle-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+.vehicle-dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.vehicle-dropdown-content button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.vehicle-dropdown:hover .vehicle-dropdown-content {display: block;}
+
+.vehicle-dropdown:hover .drop-vehicle-button {background-color: #ddd;}
 
 .car-select-button {
   margin: 1.875rem auto;
@@ -27,7 +122,10 @@
   background-color: #DD5F29;
   border: 0.1875rem solid #EA9034;
   color: white;
+}
 
+.car-select-button:hover {
+  cursor: pointer;
 }
 
 .car-select-button-text {
@@ -46,31 +144,24 @@
   font-size: 0.875rem;
   font-weight: 500;
   border: 0.1875rem solid #DD5F29;
-  margin: 1.25rem 0rem 0rem 1.25rem;
-}
-
-.different-location-checkbox {
-  height: 25px;
-  width: 25px;
-  margin: 10px 0px 10px 20px;
-  border: 3px solid #DD5F29;
+  margin: 1.25rem 1.875rem 0rem 1.25rem;
 }
 
 .select-time {
-  width: 130px;
-  height: 28px;
-  font-size: 14px;
+  width: 8.125rem;
+  height: 1.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  border: 3px solid #DD5F29;
-  margin: 0px 10px;
+  border: 0.1875rem solid #DD5F29;
+  margin: 0rem 0.625rem;
 }
 
 .location-checkbox {
   display: inline;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: white;
-  top: 10px;
-  margin-left: 10px;
+  top: 0.625rem;
+  margin-left: 0.625rem;
 }
 
 .location-checkbox-div {
@@ -79,8 +170,8 @@
   justify-content: center;
 }
 
-.landing-date-time {
-  margin: 10px 0px;
+.landing-page-date-time-div {
+  margin: 0.625rem 0rem;
 }
 
 .select-dates {
@@ -90,15 +181,6 @@
   font-weight: 500;
   border: 3px solid #DD5F29;
   margin: 10px 30px 10px 20px;
-}
-
-.select-car {
-  width: 285px;
-  height: 28px;
-  font-size: 14px;
-  font-weight: 500;
-  border: 3px solid #DD5F29;
-  margin: 0px 30px 0px 20px;
 }
 
 .blue-div {
@@ -122,14 +204,14 @@
 
 .landing-div {
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   height: 44.5rem;
   border: solid 0.0625rem #979797;
   background-image: linear-gradient(#2d5da6, #c9dbf5);
 }
 
 .small-orange-rectangle {
-  background-image: url(./images/rectangle-2.png);
+  background-color: #ea9034;
   width: 18.5rem;
   height: 3.75rem;
   display: flex;
@@ -139,10 +221,11 @@
   padding: 0rem;
   text-align: center;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .big-orange-rectangle {
+  background-color: #ea9034;
   width: 42.125rem;
   height: 4.5625rem;
   display: flex;
@@ -152,15 +235,15 @@
   padding: 0rem;
   text-align: center;
   box-shadow: -0.125rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.5);
-  background-image: url(./images/rectangle-2@2x.png);
   position: relative;
-  z-index: 4;
+  z-index: 3;
 }
 
 .center-orange-divs {
   margin-top: 5rem;
   position: relative;
   /* z-index: ; */
+}
 
 .Nav{
   /* display: flex; */
@@ -279,4 +362,5 @@
 /* width: 100vw; */
 /* height: 100vh; */
 }
+
 

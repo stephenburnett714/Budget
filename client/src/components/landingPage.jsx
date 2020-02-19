@@ -1,7 +1,14 @@
 import React from 'react'
+import Calendar from 'react-calendar'
+import { Link } from 'react-router-dom'
 
 
-function landingPage() {
+function landingPage(props) { 
+   
+    const showCalendar = (e) => {
+        e.preventDefault()
+
+    }
 
 
     return (
@@ -26,28 +33,49 @@ function landingPage() {
                     <input type="text" className="pick-up-searchbar" placeholder="Enter Your Pickup Location"/>
                     
                     <div className="location-checkbox-div">
-                        <input type="checkbox" className="different-location-checkbox"/> 
+                        <input type="checkbox" /> 
                         <p className="location-checkbox">Returning to a Different Location?</p>
                     </div>
 
-                    <div className="landing-date-time">
-                        <input type="text" className="select-dates" placeholder="Select My Dates" />
+                    <div className="landing-page-date-time-div">
+
+                        <div className="calendar-div">
+                            <button className="calendar-dropdown" onClick={showCalendar}> Select My dates </button>
+                                    <Calendar selectRange className="calendar-dropdown-content"
+                                        onChange={props.setCalendarDates}
+                                    />
+                        </div>
+
                         <input type="text" className="select-time" placeholder="Pickup Time" />
                         <input type="text" className="select-time" placeholder="Dropoff Time" />
                     </div>
 
                     <div className="car-type-div">
-                        <input type="text" className="select-car" placeholder="Select Vehicle Type" />
+                        
+                        <div className="vehicle-dropdown">
+                            <button className="drop-vehicle-button"> Select Vehicle Type </button>
+                                <div className="vehicle-dropdown-content">
+                                    <button onClick={props.setVehicleType} value="Economy" className="car-type-buttons">Economy</button>
+                                    <button onClick={props.setVehicleType} value="Compact" className="car-type-buttons">Compact</button>
+                                </div>
+                        </div>
+
                         <input type="checkbox" />
                         <p className="location-checkbox">Under 25?</p>
                     </div>
 
                     <div className="car-select-button-div">
-                        <button className="car-select-button"> <p className="car-select-button-text">Select my car</p> </button>
+
+                        <Link to='/carselect' className="car-select-link">
+                            <button className="car-select-button"><p className="car-select-button-text">Select my car</p> </button>
+                        </Link>
+
                     </div>
 
                 </form>
             </div>
+
+            
 
             
         </div>
@@ -55,3 +83,4 @@ function landingPage() {
 }
 
 export default landingPage
+
