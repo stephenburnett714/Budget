@@ -3,7 +3,9 @@ import './App.css'
 import LandingPage from './components/landingPage'
 import { Route, withRouter } from 'react-router-dom'
 import SelectACar from './components/routes/SelectACar'
-import Nav from './components/Nav';
+import ResultsNav from './components/ResultsNav';
+import ResultsPage from './components/ResultsPage'
+
 
 function App() {
   const [pickUpLocation, setPickUpLocation] = useState('')
@@ -35,7 +37,6 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
-        {/* <Nav /> */}
         <Route exact path="/" 
             render={ (routeProps) => (<LandingPage {...routeProps} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} />
         <Route exact path="/carselect" component={SelectACar} />

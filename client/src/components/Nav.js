@@ -12,6 +12,7 @@ function Nav() {
                     
                     {/* <Link to='/' >home</Link> */}
                 </div>
+                <div className="Navlinks">
                 <div className="Business-Rentals-Car">
                     <Link to='/business'>Business Rentals</Link>
                     <Link to='/carsales'>Car Sales</Link>
@@ -25,6 +26,7 @@ function Nav() {
                     <Link to='/locations'>Locations</Link>
                     <Link to='/services'>Services</Link>
                     <Link to='/fastbreak'>Fastbreak</Link>
+                </div>
                 </div>
             </Router>
         </div>
