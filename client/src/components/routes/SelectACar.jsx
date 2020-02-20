@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../../App.css'
 import CarBar from "../../images/Group.png"
 import BlueBar from "../../images/RectangleCopy3x.png"
