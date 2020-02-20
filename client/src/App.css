@@ -409,7 +409,6 @@
   display: inline-flex;
   align-self: flex-end;
   /* justify-content: flex-end; */
-  background-color: #c9dbf5;
   /* align-items: flex-end; */
   /* flex-wrap: nowrap; */
 }
@@ -433,7 +432,6 @@
   /* text-align: right; */
   /* justify-self: right; */
   /* margin-right: 1rem;  */
-  background-color: orange;
 }
 .Business-Rentals-Car a{
   text-decoration: none;
@@ -455,7 +453,6 @@
   flex-direction: row;
   justify-content: space-around;
   align-self: flex-end;
-  background-color: violet;
 }
 .Reservations-Deals-L a{
   text-decoration: none;

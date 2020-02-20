@@ -3,7 +3,6 @@ import './App.css'
 import LandingPage from './components/landingPage'
 import { Route, withRouter } from 'react-router-dom'
 import SelectACar from './components/routes/SelectACar'
-import Nav from './components/Nav';
 import ResultsPage from './components/ResultsPage'
 import LogIn from './components/LogIn'
 import Users from './components/Users'
@@ -17,9 +16,6 @@ function App() {
   const [vehicleType, setVehicleType] = useState('')
   const [pickUpDate, setPickUpDate] = useState('')
   const [dropOffDate, setDropOffDate] = useState('')
-
-  console.log(pickUpLocation)
-  console.log(pickUpCityState)
 
   const handlePickUpLocationClick = (e) => {
     e.preventDefault()
@@ -56,10 +52,8 @@ function App() {
     <React.Fragment>
       <div className="App">
 
-        <Nav />
-
         <Route exact path="/" 
-            render={ () => (<LandingPage  setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} />
+            render={() => (<LandingPage  setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} />
 
         <Route exact path="/login"
             render={() => (<LogIn />)} />
@@ -72,8 +66,8 @@ function App() {
 
 
          <Route exact path="/carselect">
-          <SelectACar vehicleType={vehicleType}/>
-        </Route>
+            <SelectACar vehicleType={vehicleType}/>
+         </Route>
 
 
       </div>
