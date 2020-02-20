@@ -7,6 +7,7 @@ import ResultsPage from './components/ResultsPage'
 import LogIn from './components/LogIn'
 import Users from './components/Users'
 import Reservations from './components/Reservations'
+// import ResultsNav from './'
 
 
 
@@ -81,7 +82,7 @@ console.log(carSelected)
 
 
         <Route exact path="/results">
-          <ResultsPage  />
+          <ResultsPage vehicleType={vehicleType} pickUpLocation={pickUpLocation} pickUpCityState={pickUpCityState} pickUpDate={pickUpDate} dropOffDate={dropOffDate} carSelected={carSelected} />
         </Route>
 
       </div>
