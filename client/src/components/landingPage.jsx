@@ -7,7 +7,6 @@ function landingPage(props) {
    
     const showCalendar = (e) => {
         e.preventDefault()
-
     }
 
 
@@ -25,12 +24,19 @@ function landingPage(props) {
                 </div>
             </div>
             
-            <div className="FAVPNG_leaves_rkB7hhB5"></div>
+                <div className="FAVPNG_leaves_rkB7hhB5"></div>
 
             <div className="blue-div">
-                <form action="">
-                    
-                    <input type="text" className="pick-up-searchbar" placeholder="Enter Your Pickup Location"/>
+                <form >
+
+                    <div className="location-dropdown">
+                            <button className="drop-location-button" onClick={showCalendar}> Enter Your Pickup Location </button>
+                                <div className="location-dropdown-content">
+                                    <button onClick={props.setLocation} value="JFK" className="car-type-buttons">JFK Airport</button>
+                                    <button onClick={props.setLocation} value="NWK" className="car-type-buttons">Newark Liberty Airport</button>
+                                    <button onClick={props.setLocation} value="LGA" className="car-type-buttons">La Guardia Airport</button>
+                                </div>
+                        </div>
                     
                     <div className="location-checkbox-div">
                         <input type="checkbox" /> 
@@ -53,7 +59,7 @@ function landingPage(props) {
                     <div className="car-type-div">
                         
                         <div className="vehicle-dropdown">
-                            <button className="drop-vehicle-button"> Select Vehicle Type </button>
+                            <button className="drop-vehicle-button" onClick={showCalendar}> Select Vehicle Type </button>
                                 <div className="vehicle-dropdown-content">
                                     <button onClick={props.setVehicleType} value="Economy" className="car-type-buttons">Economy</button>
                                     <button onClick={props.setVehicleType} value="Compact" className="car-type-buttons">Compact</button>
@@ -66,9 +72,11 @@ function landingPage(props) {
 
                     <div className="car-select-button-div">
 
+                    <button className="car-select-button">
                         <Link to='/carselect' className="car-select-link">
-                            <button className="car-select-button"><p className="car-select-button-text">Select my car</p> </button>
+                            Select my car
                         </Link>
+                    </button>
 
                     </div>
 

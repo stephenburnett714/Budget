@@ -1,21 +1,45 @@
 .FAVPNG_leaves_rkB7hhB5 {
   background-image: url(./images/favpng-leaves-rk-b-7-hh-b-5.png);
-  width: 36.25rem;
+  width: 0rem;
   height: 45rem;
   position: relative;
   left: 66.75rem;
   bottom: 13.75rem;
 }
 
+.qr-code-img {
+  background-image: url(./images/qr-code.png);
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  margin: auto;
+}
+
+.qr-code-div {
+  margin-top: 30px;
+}
+
+.footer-div {
+  background-color: #EA9034;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-underline {
+  text-decoration: underline;
+}
+
 .car-type-div {
   margin: 0;
   position: relative;
   display: inline-block;
-  
 }
 
 .car-select-div {
   align-content: center;
+  display: block;
 }
 
 .car-select-link {
@@ -28,6 +52,7 @@
   width: 100%;
   font-size: 14px;
   width: 100%;
+  outline: none;
 }
 
 .calendar-dropdown {
@@ -38,6 +63,7 @@
   border: 0.1875rem solid #DD5F29;
   width: 294px;
   text-align: left;
+  outline: none;
 }
 
 .calendar-dropdown-content {
@@ -56,19 +82,9 @@
   margin-right: 10px;
 }
 
-/* .calendar-dropdown-content Calendar {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.calendar-div:hover .calendar-dropdown-content {
   display: block;
-} */
-
-/* .vehicle-dropdown-content Calendar:hover {
-  background-color: #ddd;
-  cursor: pointer;
-} */
-
-.calendar-div:hover .calendar-dropdown-content {display: block;}
+}
 
 .drop-vehicle-button {
   background-color: #fcfcfc;
@@ -78,6 +94,18 @@
   border: 0.1875rem solid #DD5F29;
   width: 294px;
   text-align: left;
+  outline: none;
+}
+
+.drop-location-button {
+  background-color: #fcfcfc;
+  color: black;
+  padding: 6px;
+  font-size: 14px;
+  border: 0.1875rem solid #DD5F29;
+  width: 420px;
+  text-align: left;
+  outline: none;
 }
 
 .vehicle-dropdown {
@@ -85,6 +113,14 @@
   display: inline-block;
   margin-left: 20px;
   margin-right: 10px;
+}
+
+.location-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: 45px;
 }
 
 .vehicle-dropdown-content {
@@ -96,7 +132,23 @@
     z-index: 1;
   }
 
+.location-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
 .vehicle-dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.location-dropdown-content button {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -108,9 +160,30 @@
   cursor: pointer;
 }
 
-.vehicle-dropdown:hover .vehicle-dropdown-content {display: block;}
+.location-dropdown-content button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
 
-.vehicle-dropdown:hover .drop-vehicle-button {background-color: #ddd;}
+.vehicle-dropdown:hover .vehicle-dropdown-content {
+  display: block;
+}
+
+.vehicle-dropdown:hover .drop-vehicle-button {
+  background-color: #ddd;
+}
+
+.location-dropdown:hover .location-dropdown-content {
+  display: block;
+}
+
+.location-dropdown:hover .drop-location-button {
+  background-color: #ddd;
+}
+
+.car-type-buttons:hover {
+  background-color: #ddd;
+}
 
 .car-select-button {
   margin: 1.875rem auto;
@@ -121,6 +194,67 @@
   justify-content: center;
   background-color: #DD5F29;
   border: 0.1875rem solid #EA9034;
+  color: white;
+}
+
+.car-select-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.login-buttons {
+  width: 25rem;
+  height: 2.8125rem;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #DD5F29;
+  border: 0.1875rem solid #EA9034;
+  color: white;
+  outline: none;
+  font-size: 16px;
+  position: relative;
+  top: 70px;
+}
+
+.see-reservations-button {
+  width: 25rem;
+  height: 2.8125rem;
+  display: block;
+  margin: auto;
+  margin-top: 0px;
+  background-color: #DD5F29;
+  border: 0.1875rem solid #EA9034;
+  color: white;
+  outline: none;
+  font-size: 16px;
+  position: relative;
+  top: 40px;
+}
+
+.reservations-header-text {
+  color: white;
+  text-align: center;
+}
+
+.reservations-header-div {
+  margin-top: 100px;
+}
+
+.see-reservations-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.user-text-fields {
+  width: 60%;
+  margin: auto;
+  padding: 5px;
+}
+
+.login-buttons a {
+  text-decoration: none;
   color: white;
 }
 
@@ -135,16 +269,6 @@
   font-size: 1rem;
   line-height: 1.375rem;
   margin: 0;
-}
-
-.pick-up-searchbar {
-  width: 25rem;
-  height: 1.75rem;
-  font-family: Avenir;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border: 0.1875rem solid #DD5F29;
-  margin: 1.25rem 1.875rem 0rem 1.25rem;
 }
 
 .select-time {
@@ -189,6 +313,16 @@
   width: 750px;
   height: 300px;
   margin: auto;
+  bottom: 650px;
+}
+
+.blue-div-two {
+  background-color: #0b285c;
+  align-content: center;
+  justify-content: center;
+  width: 750px;
+  height: 300px;
+  margin: 50px auto;
   bottom: 650px;
 }
 
@@ -243,6 +377,18 @@
   margin-top: 5rem;
   position: relative;
   /* z-index: ; */
+}
+
+.users-input-fields {
+  margin: 10px auto;
+}
+
+.users-input-div {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  margin-left: 140px;
+  justify-content: center;
 }
 
 .Nav{
@@ -322,6 +468,7 @@
   margin-top: 0.563rem;
   margin-bottom: 0.344rem;
 }
+
 .resultsnav {
   display: flex;
   width: 472px;
@@ -338,12 +485,15 @@
   justify-content: space-around;
   margin-left: 33rem;
 }
+
 .resultsnav a{
   text-decoration: none;
 }
-.togglebar{
+
+.togglebar {
   background-image: url('./images/Group.png');
 }
+
 .rate-calc{
   display: flex;
   justify-content: flex-end;
@@ -353,48 +503,37 @@
 .reservation-info{
   display: inline;
 }
-.pick-up{
+.pick-up {
   margin-right: 35rem;
   /* margin-left: 10rem; */
 }
-.drop-off{
-  /* margin-right: 8rem; */
-  /* margin-left:13rem */
-}
-.titles{
+
+.titles {
   /* background-color: red; */
   display: flex;
   flex-direction: column;
 }
-.prices{
+.prices {
   /* background-color: rosybrown ; */
   margin-left: 6.125rem;
   display: flex;
   align-content: flex-end;
   margin-right: 2.813rem;
 }
-.extras{
+.extras {
   /* margin-top: 50rem; */
   /* background-color: rgb(135, 140, 155); */
   border-bottom: grey solid .09rem;
   color: black;
 }
-/* .addonbutton{
-  background-color: red;
-  display: flex;
-  justify-content: flex-end;
-  align-content: flex-end;
-} */
-.options{
+
+.options {
   /* background-color: salmon; */
   display: flex;
   flex-direction: column;
   width: 44rem;
 }
-.options-2{
-  /* background-color: seagreen; */
-  /* width: 44rem; */
-}
+
 .button{
   background-color: #ea9034;
   display: flex;
@@ -407,9 +546,11 @@
   font-weight: 600;
   font-size: 1.125rem;
 }
-h3{
+
+h3 {
   color: #dd5f29
 }
+
 .protections{
   /* background-color: palegreen; */
   width: 20rem;

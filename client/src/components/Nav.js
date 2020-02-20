@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Link } from 'react-router-dom'
 
 
 function Nav() {
-    console.log('alex')
+    
     return (
         <div className="Nav">
             <Router>
@@ -20,6 +20,7 @@ function Nav() {
                     <Link to='/register'>Register</Link>
                     <Link to='/signin'>Sign In</Link>
                 </div>
+                
                 <div className="Reservations-Deals-L">
                     <Link to='/reservations'>Reservations</Link>
                     <Link to='/deals'>Deals</Link>
