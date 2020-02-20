@@ -1,19 +1,32 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import '../../App.css'
 import CarBar from "../../images/Group.png"
 import BlueBar from "../../images/RectangleCopy3x.png"
-import useAxios from 'axios-hooks'
+import { getCarByType } from "./../../services/apihelper"
 
 
 
 
 function SelectACar(props) {
-  const [{ data, loading, error }, refetch] = useAxios(
 
-  )
 
+  const [carList, setCarList] = useState([])
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await getCarByType(props.vehicleType)
+            console.log(response)
+            setCarList(response.cars);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    fetchData()
+}, [])
 
 
   return (
@@ -50,38 +63,51 @@ function SelectACar(props) {
       </div>
 
       {/* Cars */}
-
+      
       <div className="car-info-container">
 
-        <div className="single-car-info-container">
-          <div className="economy-car-picture"></div>
-          <div>
-            <h1>Economy</h1>
-            <h1>!!!!CAR NAME!!!!</h1>
-            <h1>View more info</h1>
-          </div>
+      {carList && carList.map((car, index) => {
+ 
+        return (
+
+
+        <div key={index}  className="car-info-container">
+             <div className="single-car-info-container" >
+              <div className="economy-car-picture"></div>
+              <div>
+                <div className="car-info-header">{car.size}</div>
+                <div className="car-name-header">{car.make} {car.model}</div>
+                <h4 className="view-more-info">View more vehicle info</h4>
+
+                <div className="car-info">
+                <div>Fuel Efficiency: {car.mpg} MPG</div>
+                <div>Suitcases: {car.luggage}</div>
+                <div>Passangers: {car.seating}</div>
+                <div>EPA Rating: 8.2</div>
+                </div>
+
+                <div>${car.price}</div>
+                <button >
+                <Link key={index} to = '/results'>
+                  Pay Now
+                  </Link>
+                  </button>
+                </div>
+                </div>
+
+        
         </div>
-
-
-        <div className="single-car-info-container">
-        <div className="compact-car-picture"></div>
-        <div>
-        <h1>Compact</h1>
-        <h1>!!!!CAR NAME!!!!</h1>
-        <h1>View more info</h1>
+        )
+      })}
+     
+        
+        
       </div>
       </div>
-      </div>
-
-
-
-    </div>
-
 
 
   )
 }
-
 
 
 export default SelectACar
