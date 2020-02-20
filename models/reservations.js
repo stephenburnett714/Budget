@@ -3,9 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   const Reservations = sequelize.define('Reservations', {
     pickUpDate: DataTypes.STRING,
     dropOffDate: DataTypes.STRING,
-    userId: DataTypes.INTEGER,
-    locationId: DataTypes.INTEGER,
-    carId: DataTypes.INTEGER
+    userId: DataTypes.INTEGER
+
   }, {});
   Reservations.associate = function(models) {
     
@@ -16,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 
 
     Reservations.hasMany(models.Car, {
-      foreignKey: 'carId'
+      foreignKey: 'reservationsId'
     })
 
   };
