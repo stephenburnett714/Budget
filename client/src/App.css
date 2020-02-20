@@ -688,10 +688,11 @@ flex-direction: row;
   margin: 5px;
   padding: 0px;
   font-size: 45px;
+  margin-left: 0px;
 }
 
 .car-name-header {
-  margin: 5px;
+  margin: 0px;
   padding: 0px;
   font-size: 30px;
 }
@@ -701,5 +702,25 @@ flex-direction: row;
 }
 
 .view-more-info {
-  
+  color: #DD5F29;
+  text-decoration: underline;
+  font-size: 14px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.pay-now-button {
+background-color: #0b285c; 
+  border: none;
+  color: white;
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 190;
+  height: 40px;
+}
+
+.pay-now-button a {
+  color:white;
 }
