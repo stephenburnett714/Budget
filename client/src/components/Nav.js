@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 
 
@@ -8,11 +8,11 @@ function Nav() {
     return (
         <div className="Nav">
             <Router>
-                <div className="BUDGET-LOGO">
-                    
-                    {/* <Link to='/' >home</Link> */}
-                </div>
+                <Link to='/'>
+                    <div className="BUDGET-LOGO"></div>
+                </Link>
                 <div className="Navlinks">
+
                 <div className="Business-Rentals-Car">
                     <Link to='/business'>Business Rentals</Link>
                     <Link to='/carsales'>Car Sales</Link>
@@ -28,6 +28,7 @@ function Nav() {
                     <Link to='/services'>Services</Link>
                     <Link to='/fastbreak'>Fastbreak</Link>
                 </div>
+
                 </div>
             </Router>
         </div>

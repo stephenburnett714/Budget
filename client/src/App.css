@@ -406,11 +406,12 @@
   /* display: inline; */
 }
 .Navlinks{
-  display: flex;
-  justify-content: flex-end;
-  /* background-color: #c9dbf5; */
-  align-items: flex-end;
-  flex-wrap: wrap;
+  display: inline-flex;
+  align-self: flex-end;
+  /* justify-content: flex-end; */
+  background-color: #c9dbf5;
+  /* align-items: flex-end; */
+  /* flex-wrap: nowrap; */
 }
 .Business-Rentals-Car{
   width: 29.5rem;
@@ -428,11 +429,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-self: flex-end;
-  text-align: right;
-  justify-self: right;
-  margin-right: 1rem; 
-  /* background-color: orange; */
+  /* align-self: unset; */
+  /* text-align: right; */
+  /* justify-self: right; */
+  /* margin-right: 1rem;  */
+  background-color: orange;
 }
 .Business-Rentals-Car a{
   text-decoration: none;
@@ -454,6 +455,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-self: flex-end;
+  background-color: violet;
 }
 .Reservations-Deals-L a{
   text-decoration: none;
@@ -492,6 +494,7 @@
 
 .togglebar {
   background-image: url('./images/Group.png');
+  background-repeat: no-repeat;
 }
 
 .rate-calc{
@@ -501,22 +504,39 @@
   
 }
 .reservation-info{
-  display: inline;
+  display: flex;
+  flex: auto;
+  border-bottom: grey solid .09rem;
+  margin-top: 3rem;
 }
-.pick-up {
+ .pick-up-landing {
   margin-right: 35rem;
   /* margin-left: 10rem; */
 }
-
-.titles {
+.pick-up{
+  margin-left: 5rem;
+}
+.drop-off{
+  margin-left:13rem
+}
+.calculator{
+  width: 40%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+}
+.titles{
   /* background-color: red; */
   display: flex;
   flex-direction: column;
+  font-size: 18px;
+  font-weight: 900;
 }
 .prices {
   /* background-color: rosybrown ; */
   margin-left: 6.125rem;
   display: flex;
+  flex-direction: column;
   align-content: flex-end;
   margin-right: 2.813rem;
 }
@@ -525,9 +545,17 @@
   /* background-color: rgb(135, 140, 155); */
   border-bottom: grey solid .09rem;
   color: black;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.checkout-button{
+  background-color: orangered;
+  color: white;
+  padding: 10px 30px ;
+
 }
 
-.options {
+.options{
   /* background-color: salmon; */
   display: flex;
   flex-direction: column;
@@ -650,6 +678,25 @@ h3 {
   height:17.5rem;
   width: 100%;
   margin: 5rem;
+  justify-content: space-evenly;
+}
+
+.car-info {
+  display: flex;
+font-size: 12px;
+flex-direction: row;
+}
+
+.car-info-header {
+  margin: 5px;
+  padding: 0px;
+  font-size: 45px;
+}
+
+.car-name-header {
+  margin: 5px;
+  padding: 0px;
+  font-size: 30px;
 }
 
 

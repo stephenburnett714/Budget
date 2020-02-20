@@ -10,6 +10,7 @@ import Users from './components/Users'
 import Reservations from './components/Reservations'
 
 
+
 function App() {
   const [pickUpLocation, setPickUpLocation] = useState('')
   const [pickUpCityState, setPickUpCityState] = useState('')
@@ -70,7 +71,10 @@ function App() {
             render={() => (<Reservations />)} />
 
 
-        <Route exact path="/carselect" component={SelectACar} />
+         <Route exact path="/carselect">
+          <SelectACar vehicleType={vehicleType}/>
+        </Route>
+
 
       </div>
     </React.Fragment>
