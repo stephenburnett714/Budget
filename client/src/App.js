@@ -39,7 +39,9 @@ function App() {
       <div className="App">
         <Route exact path="/" 
             render={ (routeProps) => (<LandingPage {...routeProps} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} />
-        <Route exact path="/carselect" component={SelectACar} />
+        <Route exact path="/carselect">
+          <SelectACar vehicleType={vehicleType}/>
+        </Route>
       </div>
     </React.Fragment>
   );
