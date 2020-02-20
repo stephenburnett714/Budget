@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { Link, Redirect } from 'react-router-dom'
-import axios from 'axios'
 import '../../App.css'
 import CarBar from "../../images/Group.png"
 import BlueBar from "../../images/RectangleCopy3x.png"
@@ -62,7 +61,7 @@ function SelectACar(props) {
         <div className="car-type"></div>
       </div>
 
-      {/* Cars */}
+      {/* Mapping Cars */}
       
       <div className="car-info-container">
 
@@ -80,10 +79,10 @@ function SelectACar(props) {
                 <h4 className="view-more-info">View more vehicle info</h4>
 
                 <div className="car-info">
-                <div>Fuel Efficiency: {car.mpg} MPG</div>
-                <div>Suitcases: {car.luggage}</div>
-                <div>Passangers: {car.seating}</div>
-                <div>EPA Rating: 8.2</div>
+                <div className="small-right-space">Fuel Efficiency: {car.mpg} MPG</div>
+                <div className="small-right-space">>Suitcases: {car.luggage}</div>
+                <div className="small-right-space">>Passangers: {car.seating}</div>
+                <div className="small-right-space">>EPA Rating: 8.2</div>
                 </div>
 
                 <div>${car.price}</div>

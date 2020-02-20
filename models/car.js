@@ -13,11 +13,12 @@ module.exports = (sequelize, DataTypes) => {
     backImg: DataTypes.STRING,
     sideImg: DataTypes.STRING,
     description: DataTypes.STRING,
-    availability: DataTypes.BOOLEAN
+    availability: DataTypes.BOOLEAN,
+    reservationsId: DataTypes.INTEGER
   }, {});
   Car.associate = function(models) {
     Car.belongsTo(models.Reservations, {
-      foreignKey: 'carId',
+      foreignKey: 'reservationsId',
       onDelete: 'CASCADE'
     })
   };

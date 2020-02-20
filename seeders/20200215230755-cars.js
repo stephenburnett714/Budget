@@ -9,28 +9,103 @@ module.exports = {
         quality: 1,
         mpg: 27,
         seating: 5,
-        luggage: "1 Large Bag, 1 Small Bag",
-        price: 117,
+        luggage: "4",
+        price: 45,
         frontImg: "img",
         backImg: "N/a",
         sideImg: "N/a",
         description: "info",
         availability: true,
+        reservationsId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
-      }, {
+      }, 
+      {
+        make: "Honda",
+        model: "Civic",
+        size: "Economy",
+        quality: 1,
+        mpg: 32,
+        seating: 5,
+        luggage: "5",
+        price: 55,
+        frontImg: "img",
+        backImg: "N/a",
+        sideImg: "N/a",
+        description: "info",
+        availability: true,
+        reservationsId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        make: "Nissan",
+        model: "Sentra",
+        size: "Economy",
+        quality: 1,
+        mpg: 29,
+        seating: 5,
+        luggage: "4",
+        price: 65,
+        frontImg: "img",
+        backImg: "N/a",
+        sideImg: "N/a",
+        description: "info",
+        availability: true,
+        reservationsId: 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
         make: "Ford",
         model: "Focus",
         size: "Compact",
         quality: 1,
         mpg: 24,
         seating: 5,
-        luggage: "1 Large Bag, 2 Small Bag",
-        price: 117,
+        luggage: "5",
+        price: 55,
         frontImg: "img",
         backImg: "N/a",
         sideImg: "N/a",
         description: "info",
+        reservationsId: null,
+        availability: true,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        make: "Toyota",
+        model: "Corolla",
+        size: "Compact",
+        quality: 1,
+        mpg: 29,
+        seating: 5,
+        luggage: "4",
+        price: 60,
+        frontImg: "img",
+        backImg: "N/a",
+        sideImg: "N/a",
+        description: "info",
+        reservationsId: null,
+        availability: true,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        make: "Subaru",
+        model: "Impreza",
+        size: "Compact",
+        quality: 1,
+        mpg: 22,
+        seating: 5,
+        luggage: "5",
+        price: 50,
+        frontImg: "img",
+        backImg: "N/a",
+        sideImg: "N/a",
+        description: "info",
+        reservationsId: null,
         availability: true,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -38,12 +113,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('People', null, {});
-    */
+    return queryInterface.bulkDelete('Cars', null, {});
   }
 };

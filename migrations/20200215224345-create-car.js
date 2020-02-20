@@ -54,7 +54,10 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+    },
+    reservationsId: {
+      type: Sequelize.INTEGER
+    }
     });
   },
   down: (queryInterface, Sequelize) => {

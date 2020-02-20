@@ -1,4 +1,4 @@
-const { User, Reservations } = require('../models')
+const { User, Reservations, Car } = require('../models')
 
 const createUser = async (req, res) => {
   try {
@@ -149,6 +149,74 @@ const deleteReservation = async (req, res) => {
   }
 }
 
+const getAllCars = async (req, res) => {
+  try {
+    const cars = await Car.findAll()
+    return res.status(200).json({ cars })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getCarById = async (req, res) => {
+  try {
+      const { id } = req.params
+      const car = await Car.findOne({
+          where: { id: id }
+      })
+      return res.status(200).json({ car })
+  } catch (error) {
+      return res.status(500).send(error.message)
+  }
+
+}
+
+const updateCar = async (req, res) => {
+  try {
+      const { id } = req.params
+      const [updated] = await Car.update(req.body, {
+          where: { id: id }
+      })
+      if (updated) {
+          const updatedCar = await Car.findOne({ where: { id: id } })
+          return res.status(200).json({ car: updatedCar })
+      }
+      throw new Error('Car not found')
+  } catch (error) {
+      return res.status(500).send(error.message)
+  }
+}
+
+const searchCompact = async (req,res) => {
+  try {
+    // const { id } = req.params
+    const cars = await Car.findAll({
+        where: { size: "Compact" }
+    })
+    return res.status(200).json({ cars })
+} catch (error) {
+    return res.status(500).send(error.message)
+}
+
+}
+
+
+const searchEconomy = async (req,res) => {
+  try {
+    // const { id } = req.params
+    const cars = await Car.findAll({
+        where: { size: "Economy" }
+    })
+    return res.status(200).json({ cars })
+} catch (error) {
+    return res.status(500).send(error.message)
+}
+
+}
+
+
+
+
 module.exports = {
   createUser,
   getAllUsers,
@@ -160,5 +228,10 @@ module.exports = {
   getReservationByUserId,
   createReservation,
   updateReservation,
-  deleteReservation
+  deleteReservation,
+  getAllCars,
+  getCarById,
+  updateCar,
+  searchCompact,
+  searchEconomy
 }
