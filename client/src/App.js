@@ -17,6 +17,7 @@ function App() {
   const [pickUpDate, setPickUpDate] = useState('')
   const [dropOffDate, setDropOffDate] = useState('')
   const [carSelected, setCarSelected] = useState([])
+  const [userName, setUserName] = useState('John')
 
   const handlePickUpLocationClick = (e) => {
     e.preventDefault()
@@ -56,7 +57,11 @@ function App() {
     //setCarSelected() 
   }
 
-console.log(carSelected)
+  const setUserNameFunction = (e) => {
+    let textInput = e.target.value
+    setUserName(textInput)
+}
+
   return (
 
     <React.Fragment>
@@ -69,10 +74,10 @@ console.log(carSelected)
             render={() => (<LogIn />)} />
 
         <Route exact path="/users"
-            render={() => (<Users />)} />
+            render={() => (<Users setUserName={setUserNameFunction} />)} />
 
         <Route exact path="/reservations"
-            render={() => (<Reservations />)} />
+            render={() => (<Reservations userName={userName}/>)} />
 
 
          <Route exact path="/carselect">

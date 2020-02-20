@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Nav from './Nav'
 import { useState } from 'react'
+import Reservations from './Reservations'
 
-function Users() { 
-    const [username, setUserName] = useState('')
+function Users(props) { 
+    console.log(props)
 
     return (
         <div>
@@ -25,7 +26,7 @@ function Users() {
 
                         <div className="users-input-div">
                             <h3 className="users-input-fields"> First Name </h3>
-                            <input type="text" className="user-text-fields"/>
+                            <input type="text" className="user-text-fields" onChange={props.setUserName} />
 
                             <h3 className="users-input-fields"> Last Name </h3>
                             <input type="text" className="user-text-fields"/>
@@ -35,7 +36,7 @@ function Users() {
                         </div>
 
                         <button className="see-reservations-button">
-                                <Link to="/reservations" className="car-select-link">
+                                <Link to="/reservations" className="car-select-link" >
                                     Make a reservation
                                 </Link>
                         </button>
