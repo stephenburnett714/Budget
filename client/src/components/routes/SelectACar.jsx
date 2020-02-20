@@ -99,7 +99,7 @@ function SelectACar(props) {
 
                   <div>${car.price}</div>
 
-                    <button  onClick={props.handleSelectedCar} value={index}>
+                    <button  className="pay-now-button " onClick={props.handleSelectedCar} value={index}>
                       <Link to='/results'>Pay Now</Link>
                     </button>
 
