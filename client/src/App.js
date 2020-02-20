@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import LandingPage from './components/landingPage'
-import { Route, withRouter } from 'react-router-dom'
+import { Route, withRouter, Link } from 'react-router-dom'
 import SelectACar from './components/routes/SelectACar'
 import Nav from './components/Nav';
 import ResultsPage from './components/ResultsPage'
@@ -17,6 +17,7 @@ function App() {
   const [vehicleType, setVehicleType] = useState('')
   const [pickUpDate, setPickUpDate] = useState('')
   const [dropOffDate, setDropOffDate] = useState('')
+  const [carSelected, setCarSelected] = useState([])
 
   console.log(pickUpLocation)
   console.log(pickUpCityState)
@@ -51,12 +52,19 @@ function App() {
     setDropOffDate(date[1])
   }
 
+  const handleSelectedCar = (e) => {
+    e.preventDefault()
+    let toInt = (parseInt(e.target.value) + 1)
+    console.log(toInt)
+
+    //setCarSelected() 
+  }
+
+console.log(carSelected)
   return (
 
     <React.Fragment>
       <div className="App">
-
-        <Nav />
 
         <Route exact path="/" 
             render={ () => (<LandingPage  setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} />
@@ -70,11 +78,13 @@ function App() {
         <Route exact path="/reservations"
             render={() => (<Reservations />)} />
 
-
-         <Route exact path="/carselect">
-          <SelectACar vehicleType={vehicleType}/>
+        <Route exact path="/carselect">
+          <SelectACar vehicleType={vehicleType} handleSelectedCar={handleSelectedCar}/>
         </Route>
 
+        <Route exact path="/results">
+          <ResultsPage  />
+        </Route>
 
       </div>
     </React.Fragment>
