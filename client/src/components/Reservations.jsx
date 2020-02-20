@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 
 
-function Reservations() {
+function Reservations(props) {
 
     return(
         <div>
@@ -10,7 +10,7 @@ function Reservations() {
                 <div className="landing-div">
 
                     <div className="reservations-header-div">
-                        <h2 className="reservations-header-text">Hello John,</h2>
+                        <h2 className="reservations-header-text">Hello {props.userName},</h2>
                         <h1 className="reservations-header-text">Scan this code to begin your pick-up process.</h1>
                     </div>
                     
