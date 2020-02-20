@@ -38,14 +38,17 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
+
         <Route exact path="/">
-          <ResultsNav/>
-          <ResultsPage/>
-          {/* <Nav/> */}
-          {/* <LandingPage setLocation={handlePickUpLocationClick} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} /> */}
+    
+           <Nav/>
+           <LandingPage setLocation={handlePickUpLocationClick} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />
         </Route>
-            {/* render={ (routeProps) => (<LandingPage {...routeProps} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} /> */}
-        <Route exact path="/carselect" component={SelectACar} />
+             render={ (routeProps) => (<LandingPage {...routeProps} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} /> 
+        <Route exact path="/carselect">
+          <SelectACar vehicleType={vehicleType}/>
+        </Route>
+
       </div>
     </React.Fragment>
   );

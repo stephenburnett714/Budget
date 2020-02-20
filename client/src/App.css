@@ -525,6 +525,25 @@ h3{
   height:17.5rem;
   width: 100%;
   margin: 5rem;
+  justify-content: space-evenly;
+}
+
+.car-info {
+  display: flex;
+font-size: 12px;
+flex-direction: row;
+}
+
+.car-info-header {
+  margin: 5px;
+  padding: 0px;
+  font-size: 45px;
+}
+
+.car-name-header {
+  margin: 5px;
+  padding: 0px;
+  font-size: 30px;
 }
 
 
