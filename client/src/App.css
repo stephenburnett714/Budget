@@ -696,4 +696,10 @@ flex-direction: row;
   font-size: 30px;
 }
 
+.small-right-space {
+  margin-right: 10px;
+}
 
+.view-more-info {
+  
+}

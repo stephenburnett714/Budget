@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import LandingPage from './components/landingPage'
-import { Route, withRouter } from 'react-router-dom'
+import { Route, withRouter, Link } from 'react-router-dom'
 import SelectACar from './components/routes/SelectACar'
 import ResultsPage from './components/ResultsPage'
 import LogIn from './components/LogIn'
@@ -16,6 +16,7 @@ function App() {
   const [vehicleType, setVehicleType] = useState('')
   const [pickUpDate, setPickUpDate] = useState('')
   const [dropOffDate, setDropOffDate] = useState('')
+  const [carSelected, setCarSelected] = useState([])
 
   const handlePickUpLocationClick = (e) => {
     e.preventDefault()
@@ -47,6 +48,15 @@ function App() {
     setDropOffDate(date[1])
   }
 
+  const handleSelectedCar = (e) => {
+    e.preventDefault()
+    let toInt = (parseInt(e.target.value) + 1)
+    console.log(toInt)
+
+    //setCarSelected() 
+  }
+
+console.log(carSelected)
   return (
 
     <React.Fragment>
@@ -69,6 +79,10 @@ function App() {
             <SelectACar vehicleType={vehicleType}/>
          </Route>
 
+
+        <Route exact path="/results">
+          <ResultsPage  />
+        </Route>
 
       </div>
     </React.Fragment>

@@ -4,6 +4,7 @@ import '../../App.css'
 import CarBar from "../../images/Group.png"
 import BlueBar from "../../images/RectangleCopy3x.png"
 import { getCarByType } from "./../../services/apihelper"
+import ResultsNav from "../ResultsNav"
 
 
 
@@ -12,6 +13,7 @@ function SelectACar(props) {
 
 
   const [carList, setCarList] = useState([])
+  
 
 
   useEffect(() => {
@@ -28,7 +30,10 @@ function SelectACar(props) {
 }, [])
 
 
+
+
   return (
+    <div><ResultsNav />
     <div className="select-car-div">
 
       {/* Progress Bar */}
@@ -67,31 +72,38 @@ function SelectACar(props) {
 
       {carList && carList.map((car, index) => {
  
+
+
+
         return (
 
 
-        <div key={index}  className="car-info-container">
+        <div key={index} className="car-info-container">
+             
              <div className="single-car-info-container" >
               <div className="economy-car-picture"></div>
-              <div>
-                <div className="car-info-header">{car.size}</div>
-                <div className="car-name-header">{car.make} {car.model}</div>
-                <h4 className="view-more-info">View more vehicle info</h4>
+                <div>
+                  
+                  <div className="car-info-header">{car.size}</div>
+                    
+                  <div className="car-name-header">{car.make} {car.model}</div>
+                     
+                     <h4 className="view-more-info">View more vehicle info</h4>
 
-                <div className="car-info">
-                <div className="small-right-space">Fuel Efficiency: {car.mpg} MPG</div>
-                <div className="small-right-space">>Suitcases: {car.luggage}</div>
-                <div className="small-right-space">>Passangers: {car.seating}</div>
-                <div className="small-right-space">>EPA Rating: 8.2</div>
-                </div>
+                    <div className="car-info">
+                        <div className="small-right-space">Fuel Efficiency: {car.mpg} MPG</div>
+                        <div className="small-right-space">Suitcases: {car.luggage}</div>
+                        <div className="small-right-space">Passangers: {car.seating}</div>
+                        <div className="small-right-space">EPA Rating: 8.2</div>
+                    </div>
 
-                <div>${car.price}</div>
-                <button >
-                <Link key={index} to = '/results'>
-                  Pay Now
-                  </Link>
-                  </button>
-                </div>
+                  <div>${car.price}</div>
+
+                    <button  onClick={props.handleSelectedCar} value={index}>
+                      <Link to='/results'>Pay Now</Link>
+                    </button>
+
+                  </div>
                 </div>
 
         
@@ -103,7 +115,7 @@ function SelectACar(props) {
         
       </div>
       </div>
-
+      </div>
 
   )
 }

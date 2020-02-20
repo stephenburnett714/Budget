@@ -3,7 +3,7 @@ import { Component } from 'react';
 import {Link} from 'react-router-dom'
 
 
-   class ResultsPage extends Component {
+   function ResultsPage(props) {
    
     //    const addProtectionsandCoverClick = (e) =>{
     //        e.preventDefault()
@@ -13,8 +13,8 @@ import {Link} from 'react-router-dom'
     //    }
     //    let subtotal = 0.00
     //    console.log(subtotal)
-
-    render() {
+    console.log(props)
+    
         return (
             <div>
                 <div className="togglebar">
@@ -79,5 +79,5 @@ import {Link} from 'react-router-dom'
 
         )
     }
-}
+
 export default ResultsPage
