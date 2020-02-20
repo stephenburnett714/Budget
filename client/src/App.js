@@ -3,8 +3,9 @@ import './App.css'
 import LandingPage from './components/landingPage'
 import { Route, withRouter } from 'react-router-dom'
 import SelectACar from './components/routes/SelectACar'
-import ResultsNav from './components/ResultsNav';
+import Nav from './components/Nav';
 import ResultsPage from './components/ResultsPage'
+import ResultsNav from './components/ResultsNav'
 
 
 function App() {
@@ -37,11 +38,17 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
-        <Route exact path="/" 
-            render={ (routeProps) => (<LandingPage {...routeProps} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} />
+
+        <Route exact path="/">
+    
+           <Nav/>
+           <LandingPage setLocation={handlePickUpLocationClick} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />
+        </Route>
+             render={ (routeProps) => (<LandingPage {...routeProps} setLocation={handlePickUpLocationClick} setVehicleType={handleVehicleTypeClick} setCalendarDates={calendarDates} />)} /> 
         <Route exact path="/carselect">
           <SelectACar vehicleType={vehicleType}/>
         </Route>
+
       </div>
     </React.Fragment>
   );
