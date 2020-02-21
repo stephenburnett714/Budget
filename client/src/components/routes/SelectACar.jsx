@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../../App.css'
 import CarBar from "../../images/Group.png"
 import BlueBar from "../../images/RectangleCopy3x.png"
@@ -96,13 +96,13 @@ function SelectACar(props) {
                         <div className="small-right-space">Passangers: {car.seating}</div>
                         <div className="small-right-space">EPA Rating: 8.2</div>
                     </div>
+                      <div className="pay-now-container">     
+                        <div className="car-price">${car.price}.00</div>
 
-                  <div>${car.price}</div>
-
-                    <button  onClick={props.handleSelectedCar} value={index}>
-                      <Link to='/results'>Pay Now</Link>
-                    </button>
-
+                          <button  className="pay-now-button " onClick={props.handleSelectedCar} value={index}>
+                            <Link to='/results'>Pay Now</Link>
+                          </button>
+                    </div>
                   </div>
                 </div>
 

@@ -53,26 +53,48 @@ Show reservation info from a booked user.
 ## Sample JSON from GET /api/users
 
 ```
-[
+{
+  cars: [
   {
-    "name": "Erinn",
-    "email": "erinn@erinn.erinn",
-    "likes": [
-      {
-        "name": "Frank"
-      }
-    ]
+    id: 1,
+    make: "Ford",
+    model: "Fiesta",
+    size: "Economy",
+    quality: 1,
+    mpg: 27,
+    seating: 5,
+    luggage: "4",
+    price: 60,
+    frontImg: "img",
+    backImg: "N/a",
+    sideImg: "N/a",
+    description: "info",
+    availability: true,
+    reservationsId: 1,
+    createdAt: "2020-02-20T20:55:17.462Z",
+    updatedAt: "2020-02-20T20:55:17.462Z"
   },
   {
-    "name": "Frank",
-    "email": "frank@erinn.erinn",
-    "likes": [
-      {
-        "name": "Erinn"
-      }
-    ]
+    id: 2,
+    make: "Honda",
+    model: "Civic",
+    size: "Economy",
+    quality: 1,
+    mpg: 32,
+    seating: 5,
+    luggage: "5",
+    price: 60,
+    frontImg: "img",
+    backImg: "N/a",
+    sideImg: "N/a",
+    description: "info",
+    availability: true,
+    reservationsId: 1,
+    createdAt: "2020-02-20T20:55:17.462Z",
+    updatedAt: "2020-02-20T20:55:17.462Z"
   }
-]
+  ]
+}
 ```
 
 ## React Component Hierarchy
@@ -100,12 +122,12 @@ Show reservation info from a booked user.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Styling/CSS | H | 20 hrs| 0 hrs | 0 hrs |
-| React Components | H | 10 hrs| 0 hrs | 0 hrs |
-| Setup database | H | 10 hrs| 0 hrs | 0 hrs |
-| Logic Functionality | H | 15 hrs| 0 hrs | 0 hrs |
-| Full CRUD Functionality | H | 20 hrs| 0 hrs | 0 hrs |
-| Merging Front-End/Back-End | H | 15 hrs| 0 hrs | 0 hrs |
+| Styling/CSS | H | 20 hrs| 40 hrs | 40 hrs |
+| React Components | H | 10 hrs| 10 hrs | 10 hrs |
+| Setup database | H | 10 hrs| 10 hrs | 10 hrs |
+| Logic Functionality | H | 15 hrs| 20 hrs | 20 hrs |
+| Full CRUD Functionality | H | 20 hrs| 10 hrs | 10 hrs |
+| Merging Front-End/Back-End | H | 15 hrs| 5 hrs | 5 hrs |
 | Total | H | 92 hrs| 0 hrs | 0 hrs |
 
 ## Additional Libraries

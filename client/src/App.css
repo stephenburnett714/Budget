@@ -415,15 +415,15 @@
   /* display: inline; */
 }
 .Navlinks{
-  display: inline-flex;
+  display: block;
   align-self: flex-end;
-  /* justify-content: flex-end; */
+  padding-left: 36rem;
+  justify-content: space-around;
   /* align-items: flex-end; */
   /* flex-wrap: nowrap; */
 }
 .Business-Rentals-Car{
   width: 29.5rem;
-  
   height: 1.25rem;
   font-family: Avenir;
   font-size: 0.938;
@@ -435,7 +435,7 @@
   letter-spacing: normal;
   color: var(--terra-cotta);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   /* align-self: unset; */
   /* text-align: right; */
@@ -514,6 +514,7 @@
   flex: auto;
   border-bottom: grey solid .09rem;
   margin-top: 3rem;
+  margin-left: 1rem;
 }
  .pick-up-landing {
   margin-right: 35rem;
@@ -531,6 +532,14 @@
   display: flex;
   flex-direction: row;
 }
+.reservation-car-info{
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 1rem;
+  border-bottom: grey solid .09rem;
+  margin-top: 0rem;
+  width: 59%;
+}
 .titles{
   /* background-color: red; */
   display: flex;
@@ -546,19 +555,38 @@
   align-content: flex-end;
   margin-right: 2.813rem;
 }
+h1{
+  color: #0b285c;
+}
+h2 {
+  color: #0b285c;
+}
+h4{
+  color: #0b285c;
+}
+h5{
+  color: #0b285c;
+}
 .extras {
-  /* margin-top: 50rem; */
-  /* background-color: rgb(135, 140, 155); */
   border-bottom: grey solid .09rem;
   color: black;
   margin-top: 4rem;
   margin-bottom: 4rem;
+  margin-left: 1rem;
+}
+.checkout{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 8rem;
+  width: -30%;
+  height: 30%;
+  align-content: normal;
 }
 .checkout-button{
-  background-color: orangered;
+  background-color: #dd5f29;
   color: white;
   padding: 10px 30px ;
-
 }
 
 .options{
@@ -566,10 +594,14 @@
   display: flex;
   flex-direction: column;
   width: 44rem;
+  margin-left: 1rem;
 }
-
+.options-2{
+  margin-left: 1rem;
+  width:44rem;
+}
 .button{
-  background-color: #ea9034;
+  background-color: #0b285c;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -579,6 +611,7 @@
   color: white;
   font-weight: 600;
   font-size: 1.125rem;
+  margin-left: 64rem;
 }
 
 h3 {
@@ -589,6 +622,7 @@ h3 {
   /* background-color: palegreen; */
   width: 20rem;
   height: 2.188rem;
+  margin-left: 1rem;
 }
 
 .select-a-car-bar {
@@ -697,10 +731,11 @@ flex-direction: row;
   margin: 5px;
   padding: 0px;
   font-size: 45px;
+  margin-left: 0px;
 }
 
 .car-name-header {
-  margin: 5px;
+  margin: 0px;
   padding: 0px;
   font-size: 30px;
 }
@@ -710,5 +745,41 @@ flex-direction: row;
 }
 
 .view-more-info {
-  
+  color: #DD5F29;
+  text-decoration: underline;
+  font-size: 14px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.pay-now-button {
+background-color: #0b285c; 
+  border: none;
+  color: white;
+  padding: 0px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 190;
+  height: 40px;
+  font-style: italic;
+}
+
+.pay-now-button a {
+  color:white;
+  text-decoration: none;
+}
+
+.car-price {
+  font-size:21px;
+  margin-left:55px
+}
+
+.pay-now-container {
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 190px;
+margin-top: 20px;
+margin-left:100px
 }
