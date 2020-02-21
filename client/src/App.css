@@ -344,6 +344,15 @@
   background-image: linear-gradient(#2d5da6, #c9dbf5);
 }
 
+.landing-page-div {
+  background-image: url(./images/Landing-Page.png);
+  z-index: 1;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: auto;
+}
+
 .small-orange-rectangle {
   background-color: #ea9034;
   width: 18.5rem;
@@ -374,9 +383,9 @@
 }
 
 .center-orange-divs {
-  margin-top: 5rem;
-  position: relative;
-  /* z-index: ; */
+  padding-top: 50px;
+  /* margin-top: 5rem; */
+  /* position: relative; */
 }
 
 .users-input-fields {
