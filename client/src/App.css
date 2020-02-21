@@ -350,7 +350,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100vw;
-  height: auto;
+  height: 100vh;
 }
 
 .small-orange-rectangle {

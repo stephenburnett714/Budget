@@ -4,16 +4,6 @@ import {Link} from 'react-router-dom'
 
 
    function ResultsPage(props) {
-   
-    //    const addProtectionsandCoverClick = (e) =>{
-    //        e.preventDefault()
-    //        let priceJump = (e.target.value)
-
-    //        console.log('this button works')
-    //    }
-    //    let subtotal = 0.00
-    //    console.log(subtotal)
-    console.log(props)
     
         return (
             <div>
@@ -48,7 +38,6 @@ import {Link} from 'react-router-dom'
                         </div>
                         <div className="checkout">
                             <h5>Subtotal:</h5>
-                            {/* <h5>${subtotal}</h5> */}
                             <Link to='/reservations'><button className="checkout-button">Checkout</button></Link>
                         </div>
                     </div>

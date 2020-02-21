@@ -87,6 +87,7 @@ function landingPage(props) {
                 </div>
 
             </div>
+
         </div>
     )
 }

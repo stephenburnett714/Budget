@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Link } from 'react-router-dom'
 
 function ResultsNav() {
     return (
-        <Router>
         <div className="Nav">
             <Link to='/'>
                 <div className="homebutton"></div>
@@ -14,7 +13,6 @@ function ResultsNav() {
                 <Link to='/signin'>Sign In</Link>
             </div>
         </div>
-        </Router>
     )
 }
 
