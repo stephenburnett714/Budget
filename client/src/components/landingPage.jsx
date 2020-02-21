@@ -14,7 +14,7 @@ function landingPage(props) {
     return (
         <div>
             <Nav />
-            <div className="landing-div">
+            <div className="landing-page-div">
                 
 
                 <div className="center-orange-divs">
