@@ -34,6 +34,11 @@ function LogIn() {
                     </div>
 
                 </div>
+                
+                <footer className="footer-div">
+                    <p className="reservations-header-text">We've added new features to make your drop-off easier!</p>
+                    <p className="reservations-header-text">Check the materials in your car for <span className="footer-underline">more info.</span></p>
+                </footer>
         </div>
     )
 }

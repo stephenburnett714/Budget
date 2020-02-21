@@ -339,7 +339,7 @@
 .landing-div {
   z-index: 1;
   width: 100vw;
-  height: 44.5rem;
+  height: 85vh;
   border: solid 0.0625rem #979797;
   background-image: linear-gradient(#2d5da6, #c9dbf5);
 }
