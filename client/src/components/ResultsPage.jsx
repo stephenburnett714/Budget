@@ -4,23 +4,26 @@ import ResultsNav from './ResultsNav'
 
 
    function ResultsPage(props) {
-    //    const addProtectionsandCoverClick = (e) =>{
-    //        e.preventDefault()
-    //        const priceJump = (e.target.value)
 
-    //        console.log('this button works')
-    //    }
-    //    let subtotal = 0.00
-    //    console.log(subtotal)
 
-    console.log(props.dropOffDate)
+    console.log(props)
    
     const carType= props.vehicleType
     const dropOffDate= (props.dropOffDate).toString()
     const pickUpCityState= props.pickUpCityState
     const pickUpLocation =props.pickUpLocation
-    const pickUpDate = props.pickupDate
-    console.log(dropOffDate)
+    const pickUpDate = props.pickUpDate.toString()
+    const basePrice = 60.00
+    const protectionsAndCoverage = 0.00
+    const taxes = basePrice * .1
+    const subtotal = basePrice + protectionsAndCoverage + taxes
+    
+        function addOns(){
+            console.log('button was clicked')
+        let add = protectionsAndCoverage + 30
+        return console.log(add)
+        }
+ 
     
     return (
             <div>
@@ -43,12 +46,12 @@ import ResultsNav from './ResultsNav'
 
                         <div className="drop-off">
                             <h3>Return</h3>
-                            <h4>New York City, NY</h4>
-                            <p>{dropOffDate}</p>
+                            <h4>{pickUpLocation}</h4>
+                            <h4>{pickUpCityState}</h4>
+                            <h4>{dropOffDate}</h4>
                         </div>
 
                     </div>
-
                     <div className="calculator">
 
                         <div className="titles">
@@ -59,20 +62,23 @@ import ResultsNav from './ResultsNav'
                         </div>
 
                         <div className="prices">
-                            <h5>$20.00</h5>
+                            <h5>${basePrice}</h5>
+                            <h5>${protectionsAndCoverage}</h5>
                             <h5>$0.00</h5>
-                            <h5>$0.00</h5>
-                            <h5>$0.00</h5>
-                        </div>
-
-                        <div className="checkout">
-                            <h5>Subtotal:</h5>
-                            {/* <h5>${subtotal}</h5> */}
-                            <Link to='/reservations'><button className="checkout-button">Checkout</button></Link>
+                            <h5>${taxes}</h5>
                         </div>
 
                     </div>
 
+                </div>
+                <div className="checkout">
+                            <h5>Subtotal:</h5>
+                            <h5>${subtotal}</h5>
+                            <Link to='/reservations'><button className="checkout-button">Checkout</button></Link>
+                        </div>
+                <div className="reservation-car-info">
+                <div className="economy-car-picture"></div>
+                    <h2>{carType}</h2>
                 </div>
 
                 <div className="extras">
@@ -88,7 +94,7 @@ import ResultsNav from './ResultsNav'
                     <h4>With LDW, avoid paying for damage to our vehicle with no addition out of pocket expense and no increate to your personal policy due to an incident.</h4>
 
                     <div className="addonbutton">
-                        <button className="button" >$30.99/Day</button>
+                        <button className="button" onClick={addOns}>$30.99/Day</button>
                     </div>
                 </div>
 
