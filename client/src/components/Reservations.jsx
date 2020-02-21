@@ -20,12 +20,12 @@ function Reservations(props) {
                         <p className="reservations-header-text">How does <span className="footer-underline">this work?</span></p>
                     </div>
 
-                    <footer className="footer-div">
+                </div>
+                
+                <footer className="footer-div">
                     <p className="reservations-header-text">We've added new features to make your drop-off easier!</p>
                     <p className="reservations-header-text">Check the materials in your car for <span className="footer-underline">more info.</span></p>
-                    </footer>
-
-                </div>
+                </footer>
         </div>
     )
 }
