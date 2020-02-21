@@ -712,15 +712,31 @@ flex-direction: row;
 background-color: #0b285c; 
   border: none;
   color: white;
-  padding: 0px 32px;
+  padding: 0px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   width: 190;
   height: 40px;
+  font-style: italic;
 }
 
 .pay-now-button a {
   color:white;
+  text-decoration: none;
+}
+
+.car-price {
+  font-size:21px;
+  margin-left:55px
+}
+
+.pay-now-container {
+display: flex;
+justify-content: center;
+flex-direction: column;
+width: 190px;
+margin-top: 20px;
+margin-left:100px
 }
