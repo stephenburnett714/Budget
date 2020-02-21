@@ -96,13 +96,13 @@ function SelectACar(props) {
                         <div className="small-right-space">Passangers: {car.seating}</div>
                         <div className="small-right-space">EPA Rating: 8.2</div>
                     </div>
+                      <div className="pay-now-container">     
+                        <div className="car-price">${car.price}.00</div>
 
-                  <div>${car.price}</div>
-
-                    <button  className="pay-now-button " onClick={props.handleSelectedCar} value={index}>
-                      <Link to='/results'>Pay Now</Link>
-                    </button>
-
+                          <button  className="pay-now-button " onClick={props.handleSelectedCar} value={index}>
+                            <Link to='/results'>Pay Now</Link>
+                          </button>
+                    </div>
                   </div>
                 </div>
 
