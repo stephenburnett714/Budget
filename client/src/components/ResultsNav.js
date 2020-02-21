@@ -14,7 +14,7 @@ function ResultsNav() {
                 <Link to='/login'>Sign In</Link>
             </div>
         </div>
-        
+      
     )
 }
 
