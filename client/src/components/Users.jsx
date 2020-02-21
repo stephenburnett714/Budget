@@ -37,7 +37,7 @@ function Users(props) {
 
                         <button className="see-reservations-button">
                                 <Link to="/reservations" className="car-select-link" >
-                                    Make a reservation
+                                    See reservations
                                 </Link>
                         </button>
 

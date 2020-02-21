@@ -4,9 +4,6 @@ import ResultsNav from './ResultsNav'
 
 
    function ResultsPage(props) {
-
-
-    console.log(props)
    
     const carType= props.vehicleType
     const dropOffDate= (props.dropOffDate).toString()
@@ -17,6 +14,7 @@ import ResultsNav from './ResultsNav'
     const protectionsAndCoverage = 0.00
     const taxes = basePrice * .1
     const subtotal = basePrice + protectionsAndCoverage + taxes
+
     
         function addOns(){
             console.log('button was clicked')
@@ -73,7 +71,7 @@ import ResultsNav from './ResultsNav'
                 </div>
                 <div className="checkout">
                             <h5>Subtotal:</h5>
-                            <h5>${subtotal}</h5>
+
                             <Link to='/reservations'><button className="checkout-button">Checkout</button></Link>
                         </div>
                 <div className="reservation-car-info">
