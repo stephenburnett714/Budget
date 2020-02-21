@@ -428,23 +428,14 @@
   font-family: Avenir;
   font-size: 0.938;
   font-weight: 900;
-  /* color: #ea9034; */
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: var(--terra-cotta);
-  display: flex;
+  display: inline;
   flex-direction: column;
   justify-content: space-between;
-  /* align-self: unset; */
-  /* text-align: right; */
-  /* justify-self: right; */
-  /* margin-right: 1rem;  */
 }
 .Business-Rentals-Car a{
   text-decoration: none;
   text-align: right;
+  padding: 10px;
 }
 .Reservations-Deals-L{
   width: 35.5rem;
