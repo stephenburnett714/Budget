@@ -7,7 +7,6 @@ import ResultsPage from './components/ResultsPage'
 import LogIn from './components/LogIn'
 import Users from './components/Users'
 import Reservations from './components/Reservations'
-// import ResultsNav from './'
 
 
 
@@ -20,17 +19,22 @@ function App() {
   const [carSelected, setCarSelected] = useState([])
   const [userName, setUserName] = useState('John')
 
+  console.log(pickUpDate)
+
   const handlePickUpLocationClick = (e) => {
     e.preventDefault()
     let targetValue = (e.target.value)
 
     if (targetValue === 'JFK') {
+      document.querySelector('.drop-location-button').innerHTML = 'John F. Kennedy International Airport'
       setPickUpLocation('John F. Kennedy International Airport')
       setPickUpCityState('Queens, NY 11430')
     } else if (targetValue === 'NWK') {
+      document.querySelector('.drop-location-button').innerHTML = 'Newark Liberty International Airport'
       setPickUpLocation('Newark Liberty International Airport')
       setPickUpCityState('Newark, NJ 07114')
     } else if (targetValue === 'LGA') {
+      document.querySelector('.drop-location-button').innerHTML = 'La Guardia Airport'
       setPickUpLocation('La Guardia Airport')
       setPickUpCityState('Queens, NY 11371')
     } else {
@@ -42,11 +46,16 @@ function App() {
   const handleVehicleTypeClick = (e) => {
     e.preventDefault()
     let vehicleType = (e.target.value)
+    document.querySelector('.drop-vehicle-button').innerHTML = vehicleType
     setVehicleType(vehicleType)
   }
 
   const calendarDates = date => {
-    setPickUpDate(date[0])
+    let startDate = date[0].toString()
+    startDate.slice(0, 5)
+    console.log(date[0])
+    console.log(startDate)
+    setPickUpDate(startDate)
     setDropOffDate(date[1])
   }
 

@@ -10,7 +10,7 @@ function ResultsNav() {
             </Link>
 
                 <div className="resultsnav">
-                    <Link to='/customercare'>Customer Care</Link>
+                    <h3 className="dummy-results-nav-links">Customer Care</h3>
                     <Link to='/login'>Sign In</Link>
                </div>
         </div>

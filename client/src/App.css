@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 .FAVPNG_leaves_rkB7hhB5 {
   background-image: url(./images/favpng-leaves-rk-b-7-hh-b-5.png);
   width: 0rem;
@@ -402,8 +406,10 @@
 
 .Nav{
   display: flex;
-  text-align: right;
+  width: 100vw;
+  justify-content: space-between;
 }
+
 .BUDGET-LOGO {
   background-image: url('./images/budget-logo.png');
   width: 15.938rem;
@@ -412,50 +418,69 @@
   margin-left: 3.063rem;
   margin-top: 0.563rem;
   margin-bottom: 0.344rem;
-  /* display: inline; */
 }
 .Navlinks{
   display: block;
   align-self: flex-end;
   padding-left: 36rem;
-  justify-content: space-around;
-  /* align-items: flex-end; */
-  /* flex-wrap: nowrap; */
+  /* justify-content: flex-end;
+  flex-direction: row; */
+  width: 100%;
 }
-.Business-Rentals-Car{
+.Business-Rentals-Car {
   width: 29.5rem;
   height: 1.25rem;
   font-family: Avenir;
   font-size: 0.938;
   font-weight: 900;
   display: inline;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
 }
-.Business-Rentals-Car a{
+.Business-Rentals-Car a {
   text-decoration: none;
   text-align: right;
   padding: 10px;
 }
-.Reservations-Deals-L{
+.Reservations-Deals-L {
   width: 35.5rem;
   height: 2.5rem;
-  object-fit: contain;
   font-family: Avenir;
   font-size: 1.25rem;
   font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--marine);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-self: flex-end;
+  align-items: center;
+  align-content: flex-end;
 }
-.Reservations-Deals-L a{
+
+.Reservations-Deals-L a {
   text-decoration: none;
+}
+
+.dummy-nav-links {
+  color: blue;
+  font-size: 1.25rem;
+  font-family: Avenir;
+  font-weight: 900;
+}
+
+.dummy-nav-upper-links {
+  display: inline;
+  font-size: 0.938;
+  font-weight: 900;
+  color: blue;
+  padding: 12px;
+}
+
+.dummy-results-nav-links {
+  color: blue;
+  font-size: 18px;
+  font-weight: 900;
 }
 
 .homebutton {
@@ -475,18 +500,17 @@
   font-family: Avenir;
   font-size: 18px;
   font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--terra-cotta);
   align-self: center;
   justify-content: space-around;
   margin-left: 33rem;
+  align-items: center;
 }
 
-.resultsnav a{
+.resultsnav a {
   text-decoration: none;
+  color: blue;
 }
 
 .togglebar {
@@ -523,6 +547,11 @@
   display: flex;
   flex-direction: row;
 }
+
+.results-subtotal {
+  color: #EA9034;
+}
+
 .reservation-car-info{
   display: flex;
   flex-direction: column-reverse;
@@ -532,20 +561,28 @@
   width: 59%;
 }
 .titles{
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   font-size: 18px;
   font-weight: 900;
 }
+
+.titles h4 {
+  margin-bottom: 30px;
+}
+
 .prices {
-  /* background-color: rosybrown ; */
   margin-left: 6.125rem;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
   margin-right: 2.813rem;
 }
+
+.prices h4 {
+  margin-bottom: 37px;
+}
+
 h1{
   color: #0b285c;
 }
@@ -763,7 +800,8 @@ background-color: #0b285c;
 
 .car-price {
   font-size:21px;
-  margin-left:55px
+  margin-left:55px;
+  padding-bottom: 20px;
 }
 
 .pay-now-container {
