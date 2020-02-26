@@ -75,7 +75,7 @@ function landingPage(props) {
 
                         <div className="car-select-button-div">
 
-                        <button className="car-select-button">
+                        <button className="car-select-button" >
                             <Link to='/carselect' className="car-select-link">
                                 Select my car
                             </Link>

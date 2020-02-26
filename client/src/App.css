@@ -625,6 +625,10 @@ h5{
   padding: 10px 30px ;
 }
 
+.checkout-button:hover {
+  cursor: pointer;
+}
+
 .options{
   /* background-color: salmon; */
   display: flex;
