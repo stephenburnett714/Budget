@@ -637,7 +637,7 @@ h5{
   width:44rem;
 }
 .button{
-  background-color: #0b285c;
+  background-color: #EA9034;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -684,7 +684,7 @@ h5{
 }
 
 h3 {
-  color: #dd5f29
+  color: #dd5f29;
 }
 
 .protections{

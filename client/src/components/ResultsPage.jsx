@@ -19,7 +19,7 @@ import ResultsNav from './ResultsNav'
     let floatTaxes = parseFloat(taxes)
     let subTotal = basePrice + floatTaxes
 
-    console.log(rentalDays)
+    console.log(carType)
 
     const addOns = (e) => {
         e.preventDefault()
@@ -84,9 +84,18 @@ import ResultsNav from './ResultsNav'
 
                             <Link to='/reservations'><button className="checkout-button">Checkout</button></Link>
                         </div>
+
                 <div className="reservation-car-info">
-                <div className="economy-car-picture"></div>
-                    <h2>{carType}</h2>
+                    <div style={{display: "flex"}}>
+                        <div className="economy-car-picture">
+                        </div>
+
+                        <div>
+                            <h1>{carType}</h1>
+                            <h3 style={{color: "black"}}> Honda Civic or similar</h3>
+                            <h4 style={{color: "#EA9034", textDecoration: "underline"}}>View more vehicle info</h4>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="extras">
