@@ -19,7 +19,6 @@ function App() {
   const [carSelected, setCarSelected] = useState([])
   const [userName, setUserName] = useState('John')
 
-  console.log(pickUpDate)
 
   const handlePickUpLocationClick = (e) => {
     e.preventDefault()
@@ -40,7 +39,6 @@ function App() {
     } else {
       console.log('Not what we expected?')
     }
-
   }
 
   const handleVehicleTypeClick = (e) => {
@@ -51,11 +49,7 @@ function App() {
   }
 
   const calendarDates = date => {
-    let startDate = date[0].toString()
-    startDate.slice(0, 5)
-    console.log(date[0])
-    console.log(startDate)
-    setPickUpDate(startDate)
+    setPickUpDate(date[0])
     setDropOffDate(date[1])
   }
 
@@ -63,14 +57,12 @@ function App() {
     e.preventDefault()
     let toInt = (parseInt(e.target.value) + 1)
     console.log(toInt)
-
-    //setCarSelected() 
   }
 
   const setUserNameFunction = (e) => {
     let textInput = e.target.value
     setUserName(textInput)
-}
+  }
 
   return (
 

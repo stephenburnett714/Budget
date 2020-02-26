@@ -11,7 +11,10 @@ function ResultsNav() {
 
                 <div className="resultsnav">
                     <h3 className="dummy-results-nav-links">Customer Care</h3>
-                    <Link to='/login'>Sign In</Link>
+                    <div>
+                        <Link to='/login'>Sign In</Link>
+                        <div className="sign-in-logo"></div>
+                    </div>
                </div>
         </div>
 

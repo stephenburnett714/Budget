@@ -5,18 +5,21 @@ import ResultsNav from './ResultsNav'
 
    function ResultsPage(props) {
    
-    const carType= props.vehicleType
-    const dropOffDate= (props.dropOffDate).toString()
-    const pickUpCityState= props.pickUpCityState
-    const pickUpLocation =props.pickUpLocation
+    const carType = props.vehicleType
+    const dropOffDate = (props.dropOffDate).toString()
+    const pickUpCityState = props.pickUpCityState
+    const pickUpLocation = props.pickUpLocation
     const pickUpDate = props.pickUpDate.toString()
-    let basePrice = 60.00
+    
+    let numPickUpDate = parseInt(pickUpDate.substr(8, 2))
+    let numDropOffDate = parseInt(dropOffDate.substr(8, 2))
+    let rentalDays = numDropOffDate - numPickUpDate
+    let basePrice = rentalDays * 60.00
     let taxes = (basePrice * 0.075).toFixed(2)
     let floatTaxes = parseFloat(taxes)
     let subTotal = basePrice + floatTaxes
 
-    console.log(taxes)
-    console.log(floatTaxes)
+    console.log(rentalDays)
 
     const addOns = (e) => {
         e.preventDefault()
@@ -77,7 +80,7 @@ import ResultsNav from './ResultsNav'
 
                 </div>
                 <div className="checkout">
-                            <h2>Subtotal: <span className="results-subtotal"> {subTotal}</span> </h2>
+                            <h2>Subtotal: <span className="results-subtotal">$ {subTotal}</span> </h2>
 
                             <Link to='/reservations'><button className="checkout-button">Checkout</button></Link>
                         </div>

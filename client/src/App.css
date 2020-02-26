@@ -388,8 +388,6 @@ body {
 
 .center-orange-divs {
   padding-top: 50px;
-  /* margin-top: 5rem; */
-  /* position: relative; */
 }
 
 .users-input-fields {
@@ -410,6 +408,14 @@ body {
   justify-content: space-between;
 }
 
+.sign-in-logo {
+  background-image: url('./images/image\ 11.png');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
 .BUDGET-LOGO {
   background-image: url('./images/budget-logo.png');
   width: 15.938rem;
@@ -422,7 +428,7 @@ body {
 .Navlinks{
   display: block;
   align-self: flex-end;
-  padding-left: 36rem;
+  padding-left: 25rem;
   /* justify-content: flex-end;
   flex-direction: row; */
   width: 100%;
@@ -441,6 +447,7 @@ body {
   text-decoration: none;
   text-align: right;
   padding: 10px;
+  color: #ea9034;
 }
 .Reservations-Deals-L {
   width: 35.5rem;
@@ -460,6 +467,7 @@ body {
 
 .Reservations-Deals-L a {
   text-decoration: none;
+  color: blue;
 }
 
 .dummy-nav-links {
@@ -473,12 +481,12 @@ body {
   display: inline;
   font-size: 0.938;
   font-weight: 900;
-  color: blue;
+  color: #ea9034;
   padding: 12px;
 }
 
 .dummy-results-nav-links {
-  color: blue;
+  color: #ea9034;
   font-size: 18px;
   font-weight: 900;
 }
@@ -504,13 +512,13 @@ body {
   letter-spacing: normal;
   align-self: center;
   justify-content: space-around;
-  margin-left: 33rem;
+  margin-left: 1rem;
   align-items: center;
 }
 
 .resultsnav a {
   text-decoration: none;
-  color: blue;
+  color: #ea9034;
 }
 
 .togglebar {
@@ -642,6 +650,39 @@ h5{
   margin-left: 64rem;
 }
 
+.button:hover {
+ cursor: pointer;
+ outline: none;
+}
+
+.gas-logo {
+  background-image: url('./images/image\ 2.png');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}
+
+.seat-logo {
+  background-image: url('./images/image\ 3.png');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}
+
+.suitcase-logo {
+  background-image: url('./images/image\ 4.png');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}
+
+.leaf-logo {
+  background-image: url('./images/image\ 20.png');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}
+
 h3 {
   color: #dd5f29
 }
@@ -769,7 +810,7 @@ flex-direction: row;
 }
 
 .small-right-space {
-  margin-right: 10px;
+  margin: 20px;
 }
 
 .view-more-info {

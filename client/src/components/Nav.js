@@ -22,6 +22,7 @@ function Nav() {
                         <h4 className="dummy-nav-upper-links">Customer Care</h4>
                         <h4 className="dummy-nav-upper-links">Register</h4>
                         <Link to='/login'>Sign In</Link>
+                        <div className="sign-in-logo"></div>
                     </div>
                     
                     <div className="Reservations-Deals-L">
