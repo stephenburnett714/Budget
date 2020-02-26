@@ -91,10 +91,34 @@ function SelectACar(props) {
                      <h4 className="view-more-info">View more vehicle info</h4>
 
                     <div className="car-info">
-                        <div className="small-right-space">Fuel Efficiency: {car.mpg} MPG</div>
-                        <div className="small-right-space">Suitcases: {car.luggage}</div>
-                        <div className="small-right-space">Passangers: {car.seating}</div>
-                        <div className="small-right-space">EPA Rating: 8.2</div>
+                        <div className="small-right-space">
+                          <div style={{display: "flex", alignItems: "center"}}>
+                              <div className="gas-logo" style={{display: "inline-block"}}></div> <h2> {car.mpg} MPG</h2> 
+                              </div>
+                              <p>Fuel Efficiency </p>
+                          </div>
+
+                        <div className="small-right-space">
+                          <div style={{display: "flex", alignItems: "center"}}>
+                            <div className="suitcase-logo" style={{display: "inline-block"}}></div> <h2> {car.luggage}</h2>
+                            </div>
+                            <p> Suitcases </p>
+                        </div>
+
+                        <div className="small-right-space">
+                          <div style={{display: "flex", alignItems: "center"}}>
+                            <div className="seat-logo" style={{display: "inline-block"}}></div> <h2> {car.seating}</h2>
+                            </div>
+                            <p>Passengers</p>
+                        </div>
+
+                        <div className="small-right-space">
+                          <div style={{display: "flex", alignItems: "center"}}>
+                            <div className="leaf-logo" style={{display: "inline-block"}}></div> <h2> 8.2 </h2>
+                            </div>
+                            <p>EPA Rating</p>
+                        </div>
+
                     </div>
                       <div className="pay-now-container">     
                         <div className="car-price">${car.price}.00</div>

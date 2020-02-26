@@ -5,22 +5,32 @@ import ResultsNav from './ResultsNav'
 
    function ResultsPage(props) {
    
-    const carType= props.vehicleType
-    const dropOffDate= (props.dropOffDate).toString()
-    const pickUpCityState= props.pickUpCityState
-    const pickUpLocation =props.pickUpLocation
+    const carType = props.vehicleType
+    const dropOffDate = (props.dropOffDate).toString()
+    const pickUpCityState = props.pickUpCityState
+    const pickUpLocation = props.pickUpLocation
     const pickUpDate = props.pickUpDate.toString()
-    const basePrice = 60.00
-    const protectionsAndCoverage = 0.00
-    const taxes = basePrice * .1
-    const subtotal = basePrice + protectionsAndCoverage + taxes
-
     
-        function addOns(){
-            console.log('button was clicked')
-        let add = protectionsAndCoverage + 30
-        return console.log(add)
-        }
+    let numPickUpDate = parseInt(pickUpDate.substr(8, 2))
+    let numDropOffDate = parseInt(dropOffDate.substr(8, 2))
+    let rentalDays = numDropOffDate - numPickUpDate
+    let basePrice = rentalDays * 60.00
+    let taxes = (basePrice * 0.075).toFixed(2)
+    let floatTaxes = parseFloat(taxes)
+    let subTotal = basePrice + floatTaxes
+
+    console.log(carType)
+
+    const addOns = (e) => {
+        e.preventDefault()
+        let newPrice = basePrice + 30.99
+        let newTaxes = ((newPrice + 30.99) * 0.075).toFixed(2)
+        let floatNewTaxes = parseFloat(newTaxes)
+        let newSubTotal = newPrice + floatNewTaxes
+        document.querySelector('.taxes-results-page').innerHTML = `$ ${newTaxes}`
+        document.querySelector('.protection-coverages').innerHTML = `$ 30.99`
+        document.querySelector('.results-subtotal').innerHTML = `$ ${newSubTotal}`
+    }
  
     
     return (
@@ -53,30 +63,39 @@ import ResultsNav from './ResultsNav'
                     <div className="calculator">
 
                         <div className="titles">
-                            <h5>Base Rate:</h5>
-                            <h5>Protections and Coverages:</h5>
-                            <h5>Equipment and Services:</h5>
-                            <h5>Fees and Taxes:</h5>
+                            <h4>Base Rate:</h4>
+                            <h4>Protections and Coverages:</h4>
+                            <h4>Equipment and Services:</h4>
+                            <h4>Fees and Taxes:</h4>
                         </div>
 
                         <div className="prices">
-                            <h5>${basePrice}</h5>
-                            <h5>${protectionsAndCoverage}</h5>
-                            <h5>$0.00</h5>
-                            <h5>${taxes}</h5>
+                            <h4 className="baseprice-results-page">$ {basePrice}</h4>
+                            <h4 className="protection-coverages">$ 0</h4>
+                            <h4>$0.00</h4>
+                            <h4 className="taxes-results-page">$ {taxes}</h4>
                         </div>
 
                     </div>
 
                 </div>
                 <div className="checkout">
-                            <h5>Subtotal:</h5>
+                            <h2>Subtotal: <span className="results-subtotal">$ {subTotal}</span> </h2>
 
                             <Link to='/reservations'><button className="checkout-button">Checkout</button></Link>
                         </div>
+
                 <div className="reservation-car-info">
-                <div className="economy-car-picture"></div>
-                    <h2>{carType}</h2>
+                    <div style={{display: "flex"}}>
+                        <div className="economy-car-picture">
+                        </div>
+
+                        <div>
+                            <h1>{carType}</h1>
+                            <h3 style={{color: "black"}}> Honda Civic or similar</h3>
+                            <h4 style={{color: "#EA9034", textDecoration: "underline"}}>View more vehicle info</h4>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="extras">

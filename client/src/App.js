@@ -7,7 +7,6 @@ import ResultsPage from './components/ResultsPage'
 import LogIn from './components/LogIn'
 import Users from './components/Users'
 import Reservations from './components/Reservations'
-// import ResultsNav from './'
 
 
 
@@ -20,28 +19,32 @@ function App() {
   const [carSelected, setCarSelected] = useState([])
   const [userName, setUserName] = useState('John')
 
+
   const handlePickUpLocationClick = (e) => {
     e.preventDefault()
     let targetValue = (e.target.value)
 
     if (targetValue === 'JFK') {
+      document.querySelector('.drop-location-button').innerHTML = 'John F. Kennedy International Airport'
       setPickUpLocation('John F. Kennedy International Airport')
       setPickUpCityState('Queens, NY 11430')
     } else if (targetValue === 'NWK') {
+      document.querySelector('.drop-location-button').innerHTML = 'Newark Liberty International Airport'
       setPickUpLocation('Newark Liberty International Airport')
       setPickUpCityState('Newark, NJ 07114')
     } else if (targetValue === 'LGA') {
+      document.querySelector('.drop-location-button').innerHTML = 'La Guardia Airport'
       setPickUpLocation('La Guardia Airport')
       setPickUpCityState('Queens, NY 11371')
     } else {
       console.log('Not what we expected?')
     }
-
   }
 
   const handleVehicleTypeClick = (e) => {
     e.preventDefault()
     let vehicleType = (e.target.value)
+    document.querySelector('.drop-vehicle-button').innerHTML = vehicleType
     setVehicleType(vehicleType)
   }
 
@@ -54,14 +57,12 @@ function App() {
     e.preventDefault()
     let toInt = (parseInt(e.target.value) + 1)
     console.log(toInt)
-
-    //setCarSelected() 
   }
 
   const setUserNameFunction = (e) => {
     let textInput = e.target.value
     setUserName(textInput)
-}
+  }
 
   return (
 
